@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title> Surreal Meme Sandbox </title>
   </head>
+
   <script>
   $(document).ready(function(){
       $('.button').click(function(){
@@ -49,20 +50,20 @@
     </form>
 
     <h3>Choose the Top Text of your MEME</h3>
-    <form>
+    <form id="insertTopText">
       <input type="radio" id = "question" name = "Text"> Contemplative
       <input type="radio" id = "exclamation" name = "Text"> Exclamation
       <input type="radio" id = "greeting" name = "Text"> Greeting
-      <br><br><input type="radio" id = "custom" name = "Text">Custom: <input type="text" id="customtoptext" name="input">
+      <br><br><input type="radio" id = "custom" name = "Text">Custom: <input type="text" id="customtoptext" name="topText">
     </form>
-      <button onclick="generate()">Add to Top Text Library</button>
+      <input type="submit" name="addTopText" value="save caption to library"/>
 
     <h3>Choose the Bottom Text of your MEME</h3>
     <form>
       <input type="radio" id = "bquestion" name = "Text"> Contemplative
       <input type="radio" id = "bexclamation" name = "Text"> Exclamation
       <input type="radio" id = "bgreeting" name = "Text"> Greeting
-      <br><br><input type="radio" id = "bcustom" name = "Text">Custom: <input type="text" id="custombuttomtext" name="input">
+      <br><br><input type="radio" id = "bcustom" name = "Text">Custom: <input type="text" id="custombuttomtext" name="bottomText">
     </form>
       <button onclick="generate()">Add to Bottom Text Library</button>
 
