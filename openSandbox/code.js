@@ -1,8 +1,7 @@
 function generate(){
 
   checkImageType();
-  checkTopText();
-  checkButtomText();
+  checkCaption();
 
   document.getElementById("myText1").innerHTML = document.getElementById("myText").innerHTML;
   document.getElementById("mybText1").innerHTML = document.getElementById("mybText").innerHTML;
@@ -54,7 +53,7 @@ function randomAllImage(){
 }
 
 
-function checkTopText(){
+function checkCaption(){
   var question = document.getElementById("question");
   var exclamation = document.getElementById("exclamation");
   var greeting = document.getElementById("greeting");
@@ -66,7 +65,7 @@ function checkTopText(){
   }else if(greeting.checked === true){
     randomGreetingTopText();
   }else if(custom.checked === true){
-    customTopText();
+    customCaption();
   }else{
     randomAllTopText();
   }
@@ -92,27 +91,8 @@ function randomAllTopText(){
   document.getElementById("myText").innerHTML = allTxt[randomNumTxt];
 }
 
-function customTopText(){
-  document.getElementById("myText").innerHTML = document.getElementById("customtoptext").value;
-}
-
-
-function checkButtomText(){
-  var bquestion = document.getElementById("bquestion");
-  var bexclamation = document.getElementById("bexclamation");
-  var bgreeting = document.getElementById("bgreeting");
-  var bcustom = document.getElementById("bcustom");
-  if(bquestion.checked ===true){
-    randomQuestionBText();
-  }else if(bexclamation.checked === true){
-    randomExclamationBText();
-  }else if(bgreeting.checked === true){
-    randomGreetingBText();
-  }else if(bcustom.checked === true){
-    customBText();
-  }else{
-    randomAllBText();
-  }
+function customCaption(){
+  document.getElementById("myText").innerHTML = document.getElementById("customCaption").value;
 }
 
 function randomQuestionBText(){

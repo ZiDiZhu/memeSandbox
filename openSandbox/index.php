@@ -49,23 +49,15 @@
       <input type="radio" id = "thing" name = "Image"> Things in unusual places
     </form>
 
-    <h3>Choose the Top Text of your MEME</h3>
-    <form id="insertTopText">
+    <h3>Choose the Caption of your MEME</h3>
+    <form id="insertCaption">
       <input type="radio" id = "question" name = "Text"> Contemplative
       <input type="radio" id = "exclamation" name = "Text"> Exclamation
       <input type="radio" id = "greeting" name = "Text"> Greeting
-      <br><br><input type="radio" id = "custom" name = "Text">Custom: <input type="text" id="customtoptext" name="topText">
+      <br><br><input type="radio" id = "custom" name = "Text">Custom: <input type="text" id="customCaption" name="caption">
     </form>
-      <input type="submit" name="addTopText" value="save caption to library"/>
+      <input type="submit" name="addCaption" value="save caption to library"/>
 
-    <h3>Choose the Bottom Text of your MEME</h3>
-    <form>
-      <input type="radio" id = "bquestion" name = "Text"> Contemplative
-      <input type="radio" id = "bexclamation" name = "Text"> Exclamation
-      <input type="radio" id = "bgreeting" name = "Text"> Greeting
-      <br><br><input type="radio" id = "bcustom" name = "Text">Custom: <input type="text" id="custombuttomtext" name="bottomText">
-    </form>
-      <button onclick="generate()">Add to Bottom Text Library</button>
 
     <br><br><br>
     <button class = "btn" onclick="generate()">Randomize</button>
@@ -78,10 +70,8 @@
     <div class="container" id = "imagewrap">
 
       <div class = "memeimage"><img id = "myMeme" src="images/0placeholder.png"></div>
-      <div class="top1"><h2 id = "myText1">placeholder text</h2></div>
-      <div class="top"><h2 id = "myText">placeholder text</h2></div>
-      <div class="bottom"><h2 id = "mybText">placeholder text</h2></div>
-      <div class="bottom1"><h2 id = "mybText1">placeholder text</h2></div>
+      <div class="caption1"><h2 id = "myText1">placeholder text</h2></div>
+      <div class="caption"><h2 id = "myText">placeholder text</h2></div>
     </div>
 
   </body>

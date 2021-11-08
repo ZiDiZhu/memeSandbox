@@ -15,31 +15,11 @@ body{
   display: inline-block;
 }
 
-.bottom {
-  position: absolute;
-  bottom: 6px;
-  left: 50%;
-  font-size: 22px;
-  color: white;
-  mix-blend-mode: difference;
-  transform: translate(-50%,0);
-}
-
-.bottom1 {
-  position: absolute;
-  bottom: 4px;
-  font-size: 22px;
-  left: 50.15%;
-  mix-blend-mode: overlay;
-  color:cyan;
-  transform: translate(-50%,0);
-}
-
 #imagewrap {
   background-color: black;
 }
 
-.top {
+.caption {
   position: absolute;
   mix-blend-mode: difference;
   font-size: 22px;
@@ -48,7 +28,7 @@ body{
   left: 50.15%;
   transform: translate(-50%,0);
 }
-.top1 {
+.caption1 {
   position: absolute;
   color: cyan;
   mix-blend-mode: overlay;
