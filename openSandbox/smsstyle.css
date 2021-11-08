@@ -1,0 +1,85 @@
+body{
+  background-color: DarkGrey;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  color: black;
+  border-style: solid;
+  display: inline-block;
+}
+
+.memeimage{
+  display: inline-block;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  font-size: 22px;
+  color: white;
+  mix-blend-mode: difference;
+  transform: translate(-50%,0);
+}
+
+.bottom1 {
+  position: absolute;
+  bottom: 4px;
+  font-size: 22px;
+  left: 50.15%;
+  mix-blend-mode: overlay;
+  color:cyan;
+  transform: translate(-50%,0);
+}
+
+#imagewrap {
+  background-color: black;
+}
+
+.top {
+  position: absolute;
+  mix-blend-mode: difference;
+  font-size: 22px;
+  top: 6px;
+  color:white;
+  left: 50.15%;
+  transform: translate(-50%,0);
+}
+.top1 {
+  position: absolute;
+  color: cyan;
+  mix-blend-mode: overlay;
+  font-weight: normal;
+  font-size: 22px;
+  top: 4px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 30px 64px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+
+
+.change img:last-child{display:none;}
+.change:hover img:first-child{display:none;}
+.change:hover img:last-child{display:inline-block;}
