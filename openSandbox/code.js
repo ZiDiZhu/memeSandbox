@@ -1,3 +1,30 @@
+
+function onload(){
+  $('.button').click(function(){
+    $.ajax({
+         type: "GET",
+          url: "txts/captions.txt",
+          data: "data",
+          dataType: "text", /*response will be text */
+          cache: false,
+          timeout: 600000,
+          success: function (response) {
+            //reponse is a STRING (not a JavaScript object -> so we need to convert)
+               console.log("we had success!");
+               console.log(response);
+         },
+         error:function(){
+           console.log("error occurred");
+         }
+    });
+  });
+
+  //"randomize" button
+  $('.btn').click(function(){
+      generate();
+  });
+}
+
 function generate(){
 
   checkImageType();

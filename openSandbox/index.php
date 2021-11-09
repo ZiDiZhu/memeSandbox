@@ -10,39 +10,7 @@
     <title> Surreal Meme Sandbox </title>
   </head>
 
-  <script>
-  $(document).ready(function(){
-      $('.button').click(function(){
-        $.ajax({
-             type: "GET",
-              url: "txts/captions.txt",
-              data: "data",
-              dataType: "text", /*response will be text */
-              cache: false,
-              timeout: 600000,
-              success: function (response) {
-                //reponse is a STRING (not a JavaScript object -> so we need to convert)
-                   console.log("we had success!");
-                   console.log(response);
-             },
-             error:function(){
-               console.log("error occurred");
-             }
-        });
-      });
-
-      $('.btn').click(function(){
-          generate();
-      });
-    });
-
-
-
-
-
-  </script>
-
-  <body>
+  <body onload="onload()">
 
     <input type = "submit" class="button" name="readCaptions" value="readCaptions"/>
 
