@@ -10,6 +10,10 @@
     <title> Surreal Meme Sandbox </title>
   </head>
 
+  <?php
+     //$captionsFile = fopen("txts/captions.txt","r") or die("text file missing");
+  ?>
+
   <body onload="onload()">
 
     <input type = "submit" class="button" name="readCaptions" value="readCaptions"/>

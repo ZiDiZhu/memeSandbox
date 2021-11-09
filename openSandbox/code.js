@@ -21,8 +21,21 @@ function onload(){
 
   //"randomize" button
   $('.btn').click(function(){
-      generate();
+      randomize();
   });
+}
+
+function randomize(){
+  $.get("txts/captions.txt",generateRandom);
+}
+
+function generateRandom(data){
+  console.log(data);
+  let splitArray = data.split('\n');
+  console.log(splitArray);
+
+  randomNumTxt = Math.floor(Math.random()* splitArray.length);
+  document.getElementById("myText").innerHTML = splitArray[randomNumTxt];
 }
 
 function generate(){
