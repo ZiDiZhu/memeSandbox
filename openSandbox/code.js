@@ -1,4 +1,6 @@
-
+/*************
+an open-source readaptation of my cart211 final project, meme generator
+*************/
 function onload(){
   $('.button').click(function(){
     $.ajax({
@@ -23,6 +25,29 @@ function onload(){
   $('.btn').click(function(){
       randomize();
   });
+
+  $('.confirmCaption').click(function(){
+      customCaption();
+  });
+
+  $('.contributeCaption').click(function(event){
+      event.preventDefault();
+      let newCap =document.getElementById("customCaption").value;
+      $.ajax({
+           type: 'GET',
+            url: "index.php",
+            data: newCap,
+            dataType: "text", /*response will be text */
+            cache: false,
+            timeout: 600000,
+            success: function (response) {
+                 console.log(newCap);
+           },
+           error:function(){
+             console.log("error occurred");
+           }
+      });
+  });
 }
 
 function randomize(){
@@ -34,24 +59,11 @@ function randomize(){
 }
 
 function generateRandom(data){
-  console.log(data);
   let splitArray = data.split('\n');
-  console.log(splitArray);
-
   randomNumTxt = Math.floor(Math.random()* (splitArray.length-1));
   document.getElementById("myText").innerHTML = splitArray[randomNumTxt];
   //text overlay effect for aesthetic
   document.getElementById("myText1").innerHTML = document.getElementById("myText").innerHTML;
-}
-
-function generate(){
-
-  checkImageType();
-  checkCaption();
-
-  document.getElementById("myText1").innerHTML = document.getElementById("myText").innerHTML;
-
-  generatePic();
 }
 
 function checkImageType(){
@@ -69,6 +81,7 @@ function checkImageType(){
     randomThingImage();
   }else{
     randomAllImage();
+    any.checked=true;
   }
 }
 
@@ -98,50 +111,9 @@ function randomAllImage(){
 }
 
 
-function checkCaption(){
-  var question = document.getElementById("question");
-  var exclamation = document.getElementById("exclamation");
-  var greeting = document.getElementById("greeting");
-  var custom = document.getElementById("custom");
-  if(question.checked ===true){
-    randomQuestionTopText();
-  }else if(exclamation.checked === true){
-    randomExclamationTopText();
-  }else if(greeting.checked === true){
-    randomGreetingTopText();
-  }else if(custom.checked === true){
-    customCaption();
-  }else{
-    randomAllTopText();
-  }
-}
-
 function customCaption(){
   document.getElementById("myText").innerHTML = document.getElementById("customCaption").value;
-}
-
-function randomQuestionBText(){
-  randomNumTxt2 = Math.floor(Math.random()* questionTxt.length);
-  document.getElementById("mybText").innerHTML = questionTxt[randomNumTxt2];
-}
-
-function randomGreetingBText(){
-  randomNumTxt2 = Math.floor(Math.random()* greetingTxt.length);
-  document.getElementById("mybText").innerHTML = greetingTxt[randomNumTxt2];
-}
-
-function randomExclamationBText(){
-  randomNumTxt2 = Math.floor(Math.random()* exclamationTxt.length);
-  document.getElementById("mybText").innerHTML = exclamationTxt[randomNumTxt2];
-}
-
-function randomAllBText(){
-  randomNumTxt2 = Math.floor(Math.random()* allTxt.length);
-  document.getElementById("mybText").innerHTML = allTxt[randomNumTxt2];
-}
-
-function customBText(){
-  document.getElementById("mybText").innerHTML = document.getElementById("custombuttomtext").value;
+  document.getElementById("myText1").innerHTML = document.getElementById("myText").innerHTML;
 }
 
 

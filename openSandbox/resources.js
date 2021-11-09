@@ -52,31 +52,3 @@ var thingImg = new Array(
 )
 
 var allImg = [].concat(thingImg,stockImg,animeImg,atmoImg);
-
-var greetingTxt = new Array(
-  "HELLO",
-  "GOOBYE",
-  "GREETINGS!",
-  "HELLO ITS ME",
-  "H I ",
-  "MAY I HAVE A MINUTE WITH YOU");
-
-var questionTxt = new Array(
-  "WHAT IS MY PURPOSE",
-  "WHY ARE WE HERE",
-  "WHAT IS LIFE",
-  "WHY ARE WE HERE",
-  "WHYYYYY",
-  "SHOULD I BUY STOCKS",
-  "WHY ARE YOU LIKE THIS");
-
-var exclamationTxt = new Array(
-  "OHHHH WEEEEEEEEEE",
-  "AAAAAAAAAAA",
-  "YEEHAAAWWW",
-  "LMAO",
-  "FUCK YEEEEEEAAAAA",
-  "OH NO",
-  "*SCREACHING IN PAIN*");
-
-var allTxt = [].concat(greetingTxt,questionTxt,exclamationTxt);
