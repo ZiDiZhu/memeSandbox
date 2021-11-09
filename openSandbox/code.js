@@ -27,6 +27,10 @@ function onload(){
 
 function randomize(){
   $.get("txts/captions.txt",generateRandom);
+
+  //image
+  checkImageType();
+  generatePic();
 }
 
 function generateRandom(data){
@@ -34,8 +38,10 @@ function generateRandom(data){
   let splitArray = data.split('\n');
   console.log(splitArray);
 
-  randomNumTxt = Math.floor(Math.random()* splitArray.length);
+  randomNumTxt = Math.floor(Math.random()* (splitArray.length-1));
   document.getElementById("myText").innerHTML = splitArray[randomNumTxt];
+  //text overlay effect for aesthetic
+  document.getElementById("myText1").innerHTML = document.getElementById("myText").innerHTML;
 }
 
 function generate(){
@@ -108,26 +114,6 @@ function checkCaption(){
   }else{
     randomAllTopText();
   }
-}
-
-function randomQuestionTopText(){
-  randomNumTxt = Math.floor(Math.random()* questionTxt.length);
-  document.getElementById("myText").innerHTML = questionTxt[randomNumTxt];
-}
-
-function randomGreetingTopText(){
-  randomNumTxt = Math.floor(Math.random()* greetingTxt.length);
-  document.getElementById("myText").innerHTML = greetingTxt[randomNumTxt];
-}
-
-function randomExclamationTopText(){
-  randomNumTxt = Math.floor(Math.random()* exclamationTxt.length);
-  document.getElementById("myText").innerHTML = exclamationTxt[randomNumTxt];
-}
-
-function randomAllTopText(){
-  randomNumTxt = Math.floor(Math.random()* allTxt.length);
-  document.getElementById("myText").innerHTML = allTxt[randomNumTxt];
 }
 
 function customCaption(){

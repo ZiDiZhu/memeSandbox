@@ -29,18 +29,15 @@
       <input type="radio" id = "thing" name = "Image"> Things in unusual places
     </form>
 
-    <h3>Choose the Caption of your MEME</h3>
-    <form id="insertCaption">
-      <input type="radio" id = "question" name = "Text"> Contemplative
-      <input type="radio" id = "exclamation" name = "Text"> Exclamation
-      <input type="radio" id = "greeting" name = "Text"> Greeting
-      <br><br><input type="radio" id = "custom" name = "Text">Custom: <input type="text" id="customCaption" name="caption">
-    </form>
-      <input type="submit" name="addCaption" value="save caption to library"/>
+    <h3>Enter caption for your MEME: </h3>
+    <input type="text" id="customCaption" name="caption">
+    <input type="submit" name="addCaption" value="Confirm"/>
+    <br><br>
+    <input type="submit" name="addCaption" value="contribute this caption to library"/>
 
 
-    <br><br><br>
-    <button class = "btn">Randomize</button>
+    <br><p>or:</p>
+    <button class = "btn">Generate Random</button>
     <br><br><br>
 
     <div id="canvasWrapper" class="outer">
