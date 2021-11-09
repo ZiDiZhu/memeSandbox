@@ -4,7 +4,6 @@ function generate(){
   checkCaption();
 
   document.getElementById("myText1").innerHTML = document.getElementById("myText").innerHTML;
-  document.getElementById("mybText1").innerHTML = document.getElementById("mybText").innerHTML;
 
   generatePic();
 }

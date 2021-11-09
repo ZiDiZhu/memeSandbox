@@ -26,11 +26,19 @@
                    console.log(response);
              },
              error:function(){
-            console.log("error occurred");
-          }
+               console.log("error occurred");
+             }
         });
       });
-  });
+
+      $('.btn').click(function(){
+          generate();
+      });
+    });
+
+
+
+
 
   </script>
 
@@ -60,7 +68,7 @@
 
 
     <br><br><br>
-    <button class = "btn" onclick="generate()">Randomize</button>
+    <button class = "btn">Randomize</button>
     <br><br><br>
 
     <div id="canvasWrapper" class="outer">
