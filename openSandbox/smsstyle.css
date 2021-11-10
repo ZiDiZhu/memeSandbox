@@ -1,7 +1,19 @@
 body{
-  background-color: DarkGrey;
+  background-color: pink;
   text-align: center;
   font-family: sans-serif;
+}
+
+h3{
+  display: inline;
+  color: purple;
+}
+p{
+  display: inline;
+}
+h4{
+  background-color: hotpink;
+  color:white;
 }
 
 .container {

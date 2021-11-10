@@ -23,7 +23,8 @@ function onload(){
 
   //"randomize" button
   $('.btn').click(function(){
-      randomize();
+    checkImageType();
+    generatePic();
   });
 
   $('#insertCaption').submit(function(event){

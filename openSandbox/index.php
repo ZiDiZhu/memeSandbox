@@ -34,8 +34,14 @@
     <h4>****Simple Open Source Edition**** nov 2021</h4>
     <img src = "images/logo.gif">
 
+    <br><br>
+
     <!--User Selection-->
-    <h3>Choose the image of your MEME</h3>
+    <h3>Choose the image of your MEME</h3 >
+    <p>(it'll be a random picture)</p>
+
+    <br>
+
     <form>
       <input type="radio" id = "any" name = "Image"> any
       <input type="radio" id = "atmo" name = "Image"> atmospheric
@@ -44,19 +50,18 @@
       <input type="radio" id = "thing" name = "Image"> things in unusual places
     </form>
 
+    <br><br>
+
     <h3>Enter caption for your MEME: </h3>
 
-
     <form id= 'insertCaption' action="" method="GET">
-      <p><input type="text" id="customCaption" name="my_Caption" required></p>
-      <input type = "submit" name = "submit" value = "contribute" id =buttonS />
+      <p><input type="text" size="24" maxlength = "50" id="customCaption" name="my_Caption" required></p>
+      <input type = "submit" name = "submit" value = "ENTER" id =buttonS />
     </form>
+    <p>(Everything you enter will be added to the Captions library!)</p>
 
-
-
-
-    <br><p>or:</p>
-    <button class = "btn">Generate Random</button>
+    <br><br>
+    <button class = "btn">Generate!</button>
     <br><br><br>
 
     <div id="canvasWrapper" class="outer">
