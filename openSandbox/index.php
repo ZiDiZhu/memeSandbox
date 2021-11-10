@@ -1,3 +1,24 @@
+<?php
+
+  if($_SERVER['REQUEST_METHOD'] == 'GET'){
+
+
+    if(isset($_GET['myCaption'])){
+      echo("AAAAAAAAAAAAAAAA");
+
+      $newCaption = $_Get['myCaption'];
+
+      $captionsFile = fopen("txts/captions.txt","a");
+      fwrite($captionsFile, "".$newCaption."\n");
+      fclose($captionsFile);
+      echo("thank you");
+      exit;
+    }
+  }
+   //$captionsFile = fopen("txts/captions.txt","r") or die("text file missing");
+?>
+
+
 <!doctype HTML>
 <html>
 
@@ -9,25 +30,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title> Surreal Meme Sandbox </title>
   </head>
-
-  <?php
-
-    if($_SERVER['REQUEST_METHOD'] == 'GET'){
-
-      if(isset($_GET['myCaption'])){
-        echo("GETGETGETGETGOTGOTGOTGOT");
-
-        $newCaption = $_Get['myCaption'];
-
-        $captionsFile = fopen("txts/captions.txt","a") or die("text file missing");
-        fwrite($captionsFile, "".$newCaption."\n");
-        fclose($captionsFile);
-        echo("thank you");
-        exit;
-      }
-    }
-     //$captionsFile = fopen("txts/captions.txt","r") or die("text file missing");
-  ?>
 
   <body onload="onload()">
     <h4>****Simple Open Source Edition**** nov 2021</h4>
@@ -45,13 +47,16 @@
 
     <h3>Enter caption for your MEME: </h3>
 
-    <input type="text" id="customCaption" name="myCaption" required>
+
+    <form id= 'insertCaption'>
+      <p><input type="text" id="customCaption" name="myCaption" required></p>
+      <input class="contributeCaption" type = "submit" name = "submit" value = "contribute" id =buttonS />
+    </form>
 
     <button class = "confirmCaption">Confirm</button>
     <br><br>
     <button class = "contributeCaption">contribute this caption to the library</button>
 
-    <input class="contributeCaption" type = "submit" name = "submit" value = "contribute" id =buttonS />
 
 
     <br><p>or:</p>

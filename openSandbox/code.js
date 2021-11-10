@@ -32,7 +32,7 @@ function onload(){
 
   $('.contributeCaption').click(function(event){
       event.preventDefault();
-      let newCap =document.getElementById("customCaption").value;
+      var newCap = $('#insertCaption').serialize();
       $.ajax({
            type: 'GET',
             url: "index.php",
@@ -59,7 +59,7 @@ function randomize(){
 }
 
 function generateRandom(data){
-  let splitArray = data.split('\n');
+  var splitArray = data.split('\n');
   randomNumTxt = Math.floor(Math.random()* (splitArray.length-1));
   document.getElementById("myText").innerHTML = splitArray[randomNumTxt];
   //text overlay effect for aesthetic
