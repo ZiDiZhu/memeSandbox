@@ -3,15 +3,14 @@
   if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
 
-    if(isset($_GET['myCaption'])){
-      echo("AAAAAAAAAAAAAAAA");
+    if(isset($_GET['my_Caption'])){
+      $newCaption = $_GET['my_Caption'];
 
-      $newCaption = $_Get['myCaption'];
-
-      $captionsFile = fopen("txts/captions.txt","a");
+      $captionsFile = fopen("txts/captions.txt","a") or die("Unable to open file!");
       fwrite($captionsFile, "".$newCaption."\n");
+
       fclose($captionsFile);
-      echo("thank you");
+      echo $_POST['myCaption'];
       exit;
     }
   }
@@ -48,14 +47,11 @@
     <h3>Enter caption for your MEME: </h3>
 
 
-    <form id= 'insertCaption'>
-      <p><input type="text" id="customCaption" name="myCaption" required></p>
-      <input class="contributeCaption" type = "submit" name = "submit" value = "contribute" id =buttonS />
+    <form id= 'insertCaption' action="" method="GET">
+      <p><input type="text" id="customCaption" name="my_Caption" required></p>
+      <input type = "submit" name = "submit" value = "contribute" id =buttonS />
     </form>
 
-    <button class = "confirmCaption">Confirm</button>
-    <br><br>
-    <button class = "contributeCaption">contribute this caption to the library</button>
 
 
 

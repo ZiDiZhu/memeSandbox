@@ -26,28 +26,29 @@ function onload(){
       randomize();
   });
 
-  $('.confirmCaption').click(function(){
-      customCaption();
+  $('#insertCaption').submit(function(event){
+    event.preventDefault();
+    customCaption(); //display on canvas
+    console.log('submitted');
+    var newCap = $('#insertCaption').serialize();
+    $.ajax({
+         type: 'GET',
+          url: "index.php",
+          data: newCap,
+          dataType: "text", /*response will be text */
+          cache: false,
+          timeout: 600000,
+          success: function (response) {
+               console.log(newCap);
+         },
+         error:function(){
+           console.log("error occurred");
+         }
+    });
+
+
   });
 
-  $('.contributeCaption').click(function(event){
-      event.preventDefault();
-      var newCap = $('#insertCaption').serialize();
-      $.ajax({
-           type: 'GET',
-            url: "index.php",
-            data: newCap,
-            dataType: "text", /*response will be text */
-            cache: false,
-            timeout: 600000,
-            success: function (response) {
-                 console.log(newCap);
-           },
-           error:function(){
-             console.log("error occurred");
-           }
-      });
-  });
 }
 
 function randomize(){
