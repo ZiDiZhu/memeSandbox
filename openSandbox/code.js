@@ -112,6 +112,11 @@ function randomAllImage(){
   document.getElementById("myMeme").src = allImg[randomNumImg];
 }
 
+function loadCustomImage(event) {
+  document.getElementById("myMeme").src = URL.createObjectURL(event.target.files[0]);
+  generatePic();
+}
+
 
 function customCaption(){
   document.getElementById("myText").innerHTML = document.getElementById("customCaption").value;

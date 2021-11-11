@@ -50,6 +50,10 @@
       <input type="radio" id = "thing" name = "Image"> things in unusual places
     </form>
 
+    <br>
+    <p> Or Upload an Image:</p>
+    <input type ="file" accept="image/*" onchange="loadCustomImage(event)" name = 'image' size="10" required/>
+
     <br><br>
 
     <h3>Enter caption for your MEME: </h3>
@@ -70,7 +74,7 @@
 
     <div class="container" id = "imagewrap">
 
-      <div class = "memeimage"><img id = "myMeme" src="images/0placeholder.png"></div>
+      <div class = "memeimage"><img id = "myMeme" src="images/0placeholder.png" style="width:400px;width:400px;object-fit: fill"></div>
       <div class="caption1"><h2 id = "myText1">placeholder text</h2></div>
       <div class="caption"><h2 id = "myText">placeholder text</h2></div>
     </div>

@@ -25,10 +25,14 @@ h4{
 
 .memeimage{
   display: inline-block;
+
 }
 
 #imagewrap {
   background-color: black;
+  width: 400px;
+  object-fit: fill;
+  height: 400px;
 }
 
 .caption {
