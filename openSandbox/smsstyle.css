@@ -28,6 +28,11 @@ h4{
 
 }
 
+.btnImage{
+  background-color: hotpink;
+  color: white;
+}
+
 #imagewrap {
   background-color: black;
   width: 400px;

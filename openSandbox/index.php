@@ -14,7 +14,6 @@
       exit;
     }
   }
-   //$captionsFile = fopen("txts/captions.txt","r") or die("text file missing");
 ?>
 
 
@@ -49,10 +48,10 @@
       <input type="radio" id = "stock" name = "Image"> shutterstock
       <input type="radio" id = "thing" name = "Image"> things in unusual places
     </form>
-
-    <br>
+    <br><button class = "btnImage">Get Image</button>
+    <br><br>
     <p> Or Upload an Image:</p>
-    <input type ="file" accept="image/*" onchange="loadCustomImage(event)" name = 'image' size="10" required/>
+    <input type ="file" id="customPic" accept="image/*" onchange="loadCustomImage(event)" name = 'image' size="10" required/>
 
     <br><br>
 
@@ -64,8 +63,8 @@
     </form>
     <p>(Everything you enter will be added to the Captions library!)</p>
 
-    <br><br>
-    <button class = "btn">Generate!</button>
+    <br><br><p>Or:</p>
+    <button class = "btn">Random Caption</button>
     <br><br><br>
 
     <div id="canvasWrapper" class="outer">

@@ -3,6 +3,7 @@ an open-source readaptation of my cart211 final project, meme generator
 *************/
 function onload(){
   $('.button').click(function(){
+
     $.ajax({
          type: "GET",
           url: "txts/captions.txt",
@@ -23,12 +24,18 @@ function onload(){
 
   //"randomize" button
   $('.btn').click(function(){
+    randomize();
+    generatePic();
+  });
+
+  $('.btnImage').click(function(){
     checkImageType();
     generatePic();
   });
 
   $('#insertCaption').submit(function(event){
     event.preventDefault();
+    generatePic();
     customCaption(); //display on canvas
     console.log('submitted');
     var newCap = $('#insertCaption').serialize();
@@ -54,10 +61,7 @@ function onload(){
 
 function randomize(){
   $.get("txts/captions.txt",generateRandom);
-
   //image
-  checkImageType();
-  generatePic();
 }
 
 function generateRandom(data){
@@ -112,11 +116,15 @@ function randomAllImage(){
   document.getElementById("myMeme").src = allImg[randomNumImg];
 }
 
+function randomUploadedImage(){
+  var randomNumImg = Math.floor(Math.random()* uploadedImg.length);
+  document.getElementById("myMeme").src = uploadedImg[randomNumImg];
+}
+
 function loadCustomImage(event) {
   document.getElementById("myMeme").src = URL.createObjectURL(event.target.files[0]);
   generatePic();
 }
-
 
 function customCaption(){
   document.getElementById("myText").innerHTML = document.getElementById("customCaption").value;

@@ -10,7 +10,8 @@ var animeImg = new Array(
   "images/anime7.png",
   "images/anime8.png",
   "images/anime9.png",
-  "images/anime10.png",);
+  "images/anime10.png"
+);
 
 var atmoImg = new Array(
   "images/atmo1.png",
@@ -22,8 +23,8 @@ var atmoImg = new Array(
   "images/atmo7.png",
   "images/atmo8.png",
   "images/atmo9.png",
-  "images/atmo10.png",
-)
+  "images/atmo10.png"
+);
 
 var stockImg = new Array(
   "images/stock1.png",
@@ -35,8 +36,8 @@ var stockImg = new Array(
   "images/stock7.png",
   "images/stock8.png",
   "images/stock9.png",
-  "images/stock10.png",
-)
+  "images/stock10.png"
+);
 
 var thingImg = new Array(
   "images/thing1.png",
@@ -48,7 +49,8 @@ var thingImg = new Array(
   "images/thing7.png",
   "images/thing8.png",
   "images/thing9.png",
-  "images/thing10.png",
-)
+  "images/thing10.png"
+);
+
 
 var allImg = [].concat(thingImg,stockImg,animeImg,atmoImg);
